@@ -13,6 +13,8 @@
 		B4BC265B261B457400843BEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4BC265A261B457400843BEF /* Preview Assets.xcassets */; };
 		B4BC2666261B457400843BEF /* WarikanKunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2665261B457400843BEF /* WarikanKunTests.swift */; };
 		B4BC2671261B457400843BEF /* WarikanKunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2670261B457400843BEF /* WarikanKunUITests.swift */; };
+		B4BC2682261B483E00843BEF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2681261B483E00843BEF /* SwiftUIView.swift */; };
+		B4BC2687261B4E3300843BEF /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2686261B4E3300843BEF /* SwiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		B4BC266C261B457400843BEF /* WarikanKunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarikanKunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BC2670261B457400843BEF /* WarikanKunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanKunUITests.swift; sourceTree = "<group>"; };
 		B4BC2672261B457400843BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4BC2681261B483E00843BEF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		B4BC2686261B4E3300843BEF /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				B4BC2653261B456E00843BEF /* WarikanKunApp.swift */,
 				B4BC2655261B456E00843BEF /* ContentView.swift */,
+				B4BC2686261B4E3300843BEF /* SwiftView.swift */,
+				B4BC2681261B483E00843BEF /* SwiftUIView.swift */,
 				B4BC2657261B457400843BEF /* Assets.xcassets */,
 				B4BC265C261B457400843BEF /* Info.plist */,
 				B4BC2659261B457400843BEF /* Preview Content */,
@@ -261,6 +267,8 @@
 			files = (
 				B4BC2656261B456E00843BEF /* ContentView.swift in Sources */,
 				B4BC2654261B456E00843BEF /* WarikanKunApp.swift in Sources */,
+				B4BC2687261B4E3300843BEF /* SwiftView.swift in Sources */,
+				B4BC2682261B483E00843BEF /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

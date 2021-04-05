@@ -9,10 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+                    List{
+            NavigationLink(destination: SwiftUIView()) {
+                  Text("新規作成")}
+            NavigationLink(destination: SwiftView()) {
+                            Text("編集")
+                        }
+                }
+                    .navigationTitle("割り勘くん")
+        }
+    
     }
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
