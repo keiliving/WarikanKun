@@ -15,6 +15,10 @@
 		B4BC2671261B457400843BEF /* WarikanKunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2670261B457400843BEF /* WarikanKunUITests.swift */; };
 		B4BC2682261B483E00843BEF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2681261B483E00843BEF /* SwiftUIView.swift */; };
 		B4BC2687261B4E3300843BEF /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2686261B4E3300843BEF /* SwiftView.swift */; };
+		B4BC268C261C3A8700843BEF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC268B261C3A8700843BEF /* Event.swift */; };
+		B4BC2691261C3C5900843BEF /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2690261C3C5900843BEF /* Member.swift */; };
+		B4BC2696261C3CFD00843BEF /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2695261C3CFD00843BEF /* Payment.swift */; };
+		B4BC269B261C429800843BEF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC269A261C429800843BEF /* EventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		B4BC2672261B457400843BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BC2681261B483E00843BEF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		B4BC2686261B4E3300843BEF /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
+		B4BC268B261C3A8700843BEF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B4BC2690261C3C5900843BEF /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		B4BC2695261C3CFD00843BEF /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		B4BC269A261C429800843BEF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 			children = (
 				B4BC2653261B456E00843BEF /* WarikanKunApp.swift */,
 				B4BC2655261B456E00843BEF /* ContentView.swift */,
+				B4BC269A261C429800843BEF /* EventView.swift */,
+				B4BC268B261C3A8700843BEF /* Event.swift */,
+				B4BC2695261C3CFD00843BEF /* Payment.swift */,
+				B4BC2690261C3C5900843BEF /* Member.swift */,
 				B4BC2686261B4E3300843BEF /* SwiftView.swift */,
 				B4BC2681261B483E00843BEF /* SwiftUIView.swift */,
 				B4BC2657261B457400843BEF /* Assets.xcassets */,
@@ -266,9 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BC2656261B456E00843BEF /* ContentView.swift in Sources */,
+				B4BC2691261C3C5900843BEF /* Member.swift in Sources */,
+				B4BC2696261C3CFD00843BEF /* Payment.swift in Sources */,
 				B4BC2654261B456E00843BEF /* WarikanKunApp.swift in Sources */,
 				B4BC2687261B4E3300843BEF /* SwiftView.swift in Sources */,
 				B4BC2682261B483E00843BEF /* SwiftUIView.swift in Sources */,
+				B4BC268C261C3A8700843BEF /* Event.swift in Sources */,
+				B4BC269B261C429800843BEF /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
