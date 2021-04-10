@@ -9,10 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            //Text("aaa")
+            VStack{
+                    
+            NavigationLink(destination: EventEditView()) {
+                  Text("新規作成")}
+                List{
+                    //todo 既存のeventのcollection
+                }
+                    .navigationTitle("割り勘くん")
+        }
+        }
     }
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
