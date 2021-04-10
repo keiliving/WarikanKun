@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct EventEditView: View {
+    @State var isActiveSubView = false
     @State private var eventName = ""
     var body: some View {
         VStack{
         TextField("イベント名", text: $eventName).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: 270, height: 38)
-        Button(action: {}){
-            Text("new")
-        }
+            
+            NavigationLink(destination: CreateMemberView(),isActive: $isActiveSubView) {
+                EmptyView()}
+            Button(action: {
+                self.isActiveSubView.toggle()
+            }) {
+                Text("ユーザー追加")
+            }
             List{
                 //todo 一般化
     NavigationLink(destination: SwiftUIView()) {

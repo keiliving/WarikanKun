@@ -12,9 +12,11 @@ struct ContentView: View {
         NavigationView{
             //Text("aaa")
             VStack{
-                    List{
+                    
             NavigationLink(destination: EventEditView()) {
                   Text("新規作成")}
+                List{
+                    //todo 既存のeventのcollection
                 }
                     .navigationTitle("割り勘くん")
         }

@@ -9,8 +9,8 @@ import Foundation
 
 struct Member {
     let name: String
-    var payment: [Int]
-    var debt: [Int]
+    var payment: [Int] = []
+    var debt: [Int] = []
     var expenses: Int = 0
     
     mutating func updateExpenses() -> Void {
