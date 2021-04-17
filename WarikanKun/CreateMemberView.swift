@@ -18,15 +18,21 @@ struct CreateMemberView: View {
                 TextField("名前を入力してください", text: $name).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: 270, height: 38)
             }
             Spacer()
-            NavigationLink(destination: CreateMemberView(),isActive: $isActiveSubView) {
+            NavigationLink(destination: EventEditView(),isActive: $isActiveSubView) {
                 EmptyView()}
                 Button(action: {
-                    self.isActiveSubView.toggle()
+                    saveMember()
             }) {
                 Text("ユーザー追加")
             }
             Spacer()
         }
+    }
+    func saveMember () -> Void {
+        self.isActiveSubView.toggle()
+        let member = Member(name:name)
+        UserDefaults.standard.set(try? PropertyListEncoder().encode([member]), forKey:"member")
+        UserDefaults.standard.synchronize()
     }
 }
 

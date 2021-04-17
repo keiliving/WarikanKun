@@ -31,12 +31,20 @@ struct EventEditView: View {
                 Text("建て替え:810")
             }
         }
-        
     }
+                }
+           if let data = UserDefaults.standard.value(forKey:"member") as? Data {
+              let member = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
+            if let name = member?.first!.name{
+                Text(name)}
+           } else {
+            
         }
+            
         }
-    }
 }
+}
+
 
 struct EventEditView_Previews: PreviewProvider {
     static var previews: some View {
