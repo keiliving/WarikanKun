@@ -31,8 +31,16 @@ struct CreateMemberView: View {
     func saveMember () -> Void {
         self.isActiveSubView.toggle()
         let member = Member(name:name)
-        UserDefaults.standard.set(try? PropertyListEncoder().encode([member]), forKey:"member")
-        UserDefaults.standard.synchronize()
+        if let data = UserDefaults.standard.value(forKey:"member") as? Data {
+            let currentMemberArray: [Member]? = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
+            if var addMemberArray = currentMemberArray {
+                addMemberArray.append(member)
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(addMemberArray), forKey:"member")
+                UserDefaults.standard.synchronize()}
+            }
+            else{
+                UserDefaults.standard.set(try? PropertyListEncoder().encode([member]), forKey:"member")
+                UserDefaults.standard.synchronize()}
     }
 }
 

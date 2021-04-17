@@ -35,11 +35,9 @@ struct EventEditView: View {
                 }
            if let data = UserDefaults.standard.value(forKey:"member") as? Data {
               let member = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
-            if let name = member?.first!.name{
+            if let name = member?[1].name{
                 Text(name)}
-           } else {
-            
-        }
+           } else {}
             
         }
 }
