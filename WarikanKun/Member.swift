@@ -8,7 +8,7 @@
 import Foundation
 
 struct Member: Codable {
-    let name: String
+    var name: String = ""
     var payment: [Int] = []
     var debt: [Int] = []
     var expenses: Int = 0
