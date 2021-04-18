@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44BB198262BE7CD00AE610C /* EditMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BB197262BE7CD00AE610C /* EditMemberView.swift */; };
 		B4BC2654261B456E00843BEF /* WarikanKunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2653261B456E00843BEF /* WarikanKunApp.swift */; };
 		B4BC2656261B456E00843BEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC2655261B456E00843BEF /* ContentView.swift */; };
 		B4BC2658261B457400843BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4BC2657261B457400843BEF /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44BB197262BE7CD00AE610C /* EditMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemberView.swift; sourceTree = "<group>"; };
 		B4BC2650261B456E00843BEF /* WarikanKun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarikanKun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BC2653261B456E00843BEF /* WarikanKunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanKunApp.swift; sourceTree = "<group>"; };
 		B4BC2655261B456E00843BEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B4BC269A261C429800843BEF /* EventView.swift */,
 				B4BC26A8261F386400843BEF /* EventEditView.swift */,
 				B4BC26AD26216F8A00843BEF /* CreateMemberView.swift */,
+				B44BB197262BE7CD00AE610C /* EditMemberView.swift */,
 				B4BC268B261C3A8700843BEF /* Event.swift */,
 				B4BC2695261C3CFD00843BEF /* Payment.swift */,
 				B4BC2690261C3C5900843BEF /* Member.swift */,
@@ -286,6 +289,7 @@
 				B4BC2696261C3CFD00843BEF /* Payment.swift in Sources */,
 				B4BC2654261B456E00843BEF /* WarikanKunApp.swift in Sources */,
 				B4BC26AE26216F8A00843BEF /* CreateMemberView.swift in Sources */,
+				B44BB198262BE7CD00AE610C /* EditMemberView.swift in Sources */,
 				B4BC2682261B483E00843BEF /* SwiftUIView.swift in Sources */,
 				B4BC268C261C3A8700843BEF /* Event.swift in Sources */,
 				B4BC269B261C429800843BEF /* EventView.swift in Sources */,

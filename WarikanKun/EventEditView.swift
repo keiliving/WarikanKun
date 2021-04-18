@@ -20,7 +20,7 @@ struct EventEditView: View {
                 self.isActiveSubView.toggle()
             }) {
                 Text("ユーザー追加")
-            }
+            }.navigationBarBackButtonHidden(true)
             List{
                 //todo 一般化
     NavigationLink(destination: SwiftUIView()) {
@@ -33,11 +33,17 @@ struct EventEditView: View {
         }
     }
                 }
-           if let data = UserDefaults.standard.value(forKey:"member") as? Data {
-              let member = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
-            if let name = member?[1].name{
-                Text(name)}
-           } else {}
+            if let data = UserDefaults.standard.value(forKey:"member") as? Data {
+               let optionalMemberArray = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
+                if let memberArray = optionalMemberArray{
+                List{
+                    ForEach(0 ..< memberArray.count) { index in
+                        Text(memberArray[index].name)
+                    }
+                }
+             }
+            } else {}
+            
             
         }
 }
