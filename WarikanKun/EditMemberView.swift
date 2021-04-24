@@ -9,13 +9,15 @@ import SwiftUI
 
 struct EditMemberView: View {
     @State var isActiveSubView = false
-    @State var member:Member
+    @State var member: Member
+    let arrayIndex: Int
     var body: some View {
         VStack{
             Spacer()
             HStack{
                 Text("名前：")
                 TextField("", text: $member.name).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: 270, height: 38)
+                Text(String(arrayIndex))
             }
             Spacer()
             NavigationLink(destination: EventEditView(),isActive: $isActiveSubView) {
@@ -23,7 +25,7 @@ struct EditMemberView: View {
                 Button(action: {
                     saveMember()
             }) {
-                Text("ユーザー追加")
+                Text("修正")
             }
             Spacer()
         }
@@ -31,17 +33,14 @@ struct EditMemberView: View {
     func saveMember () -> Void {
         //todo 先にmemberのindexを取得した方が良さそう
         self.isActiveSubView.toggle()
-        let editMember = Member(name: member.name)
         if let data = UserDefaults.standard.value(forKey:"member") as? Data {
             let currentMemberArray: [Member]? = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
-            if var addMemberArray = currentMemberArray {
-                addMemberArray.append(member)
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(addMemberArray), forKey:"member")
+            if var editMemberArray = currentMemberArray {
+                editMemberArray[arrayIndex] = member
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(editMemberArray), forKey:"member")
                 UserDefaults.standard.synchronize()}
             }
-            else{
-                UserDefaults.standard.set(try? PropertyListEncoder().encode([member]), forKey:"member")
-                UserDefaults.standard.synchronize()}
+            else{}
     }
 }
 

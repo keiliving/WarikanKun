@@ -27,7 +27,7 @@ struct EventEditView: View {
                 if let memberArray = optionalMemberArray{
                     List{
                         ForEach(0 ..< memberArray.count) { index in
-                            NavigationLink(destination: SwiftUIView()) {
+                            NavigationLink(destination: EditMemberView(member:memberArray[index], arrayIndex:index)) {
                             Text(memberArray[index].name)
                             }
                         }
