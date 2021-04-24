@@ -47,6 +47,7 @@ struct EditMemberView: View {
 
 struct EditMemberView_Previews: PreviewProvider {
     static var previews: some View {
-        EditMemberView(member)
+        Text("aaa")
+        //EditMemberView(member)
     }
 }
