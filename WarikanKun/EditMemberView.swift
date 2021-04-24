@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct EditMemberView: View {
     @State var isActiveSubView = false
     @State var member: Member
+    
     let arrayIndex: Int
     var body: some View {
         VStack{
@@ -17,8 +19,13 @@ struct EditMemberView: View {
             HStack{
                 Text("名前：")
                 TextField("", text: $member.name).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: 270, height: 38)
+                Text(member.name)
             }
-            TextField("残高を入力して下さい", value: $member.payment, formatter: NumberFormatter())
+            HStack{
+                Text("支払い：")
+                TextField("", value: $member.payment, formatter: NumberFormatter())
+                Text(String(member.payment))
+            }
             Spacer()
             HStack{
                 Spacer()

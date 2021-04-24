@@ -9,8 +9,8 @@ import Foundation
 
 struct Member: Codable {
     var name: String = ""
-    var payment: [Int] = []
-    var debt: [Int] = []
+    var payment: Int
+    var debt: [Int] = [0]
     var expenses: Int = 0
     
     //mutating func updateExpenses() -> Void {
