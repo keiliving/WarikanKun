@@ -13,13 +13,13 @@ struct Member: Codable {
     var debt: [Int] = []
     var expenses: Int = 0
     
-    mutating func updateExpenses() -> Void {
-        let sumPayment: Int = payment.reduce(0) {(num1: Int, num2: Int) -> Int in
-            return num1 + num2
-        }
-        let sumDebt: Int = debt.reduce(0) {(num1: Int, num2: Int) -> Int in
-            return num1 + num2
-        }
-        self.expenses = sumPayment + sumDebt
-    }
+    //mutating func updateExpenses() -> Void {
+    //       let sumPayment: Int = payment.reduce(0) {(num1: Int, num2: Int) -> Int in
+   //         return num1 + num2
+   //     }
+   //     let sumDebt: Int = debt.reduce(0) {(num1: Int, num2: Int) -> Int in
+   //         return num1 + num2
+   //     }
+    //    self.expenses = sumPayment + sumDebt
+   // }
 }

@@ -26,11 +26,11 @@ struct EventEditView: View {
                let optionalMemberArray = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
                 if let memberArray = optionalMemberArray{
                     List{
-                        ForEach(0 ..< memberArray.count) { index in
+                            ForEach(0 ..< memberArray.count) { index in
                             NavigationLink(destination: EditMemberView(member:memberArray[index], arrayIndex:index)) {
-                            Text(memberArray[index].name)
-                            }
-                        }
+                                                Text(memberArray[index].name)
+                                                }
+                                            }
                     }
                 }
             } else {}
