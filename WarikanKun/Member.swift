@@ -9,17 +9,23 @@ import Foundation
 
 struct Member: Codable {
     var name: String = ""
-    var payment: Int
-    var debt: [Int] = [0]
+    var payment: Int = 0 //建て替え
+    var debt: Int = 0
     var expenses: Int = 0
     
-    //mutating func updateExpenses() -> Void {
-    //       let sumPayment: Int = payment.reduce(0) {(num1: Int, num2: Int) -> Int in
-   //         return num1 + num2
-   //     }
-   //     let sumDebt: Int = debt.reduce(0) {(num1: Int, num2: Int) -> Int in
-   //         return num1 + num2
-   //     }
-    //    self.expenses = sumPayment + sumDebt
-   // }
+    class Hoge {
+        class func getTotal() -> Int{
+            var totalPayment: Int = 0
+            if let data = UserDefaults.standard.value(forKey:"member") as? Data {
+                let MemberArray: [Member]? = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
+                if let unwrapedMemberArray = MemberArray {
+                    for index in 0 ..< unwrapedMemberArray.count {
+                        totalPayment = totalPayment + unwrapedMemberArray[index].payment
+                    }
+                }
+            else{}
+            }
+            return totalPayment
+        }
+    }
 }
