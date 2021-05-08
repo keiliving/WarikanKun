@@ -18,7 +18,7 @@ struct ContentView: View {
                 List{
                     //todo 既存のeventのcollection
                 }
-                    .navigationTitle("割り勘くん")
+                    .navigationTitle("割る男")
         }
         }
     }

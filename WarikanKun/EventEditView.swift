@@ -18,24 +18,33 @@ struct EventEditView: View {
             }) {
                 Text("ユーザー追加")
             }.navigationBarBackButtonHidden(true)
-        
-        if let data = UserDefaults.standard.value(forKey:"member") as? Data {
-           let optionalMemberArray = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
-            if let memberArray = optionalMemberArray{
-                List{
-                        ForEach(0 ..< memberArray.count) { index in
-                        NavigationLink(destination: EditMemberView(member:memberArray[index], arrayIndex:index)) {
-                            HStack{
-                                            Text(memberArray[index].name)
-                                            Text(String(memberArray[index].expenses))
-                                            }
-                        }
-                                        }
+            let total: Int = Member.getTotal()
+            if let data = UserDefaults.standard.value(forKey:"member") as? Data {
+               let optionalMemberArray = try? PropertyListDecoder().decode(Array<Member>.self, from: data)
+                if let memberArray = optionalMemberArray{
+                    List{
+                            ForEach(0 ..< memberArray.count) { index in
+                                NavigationLink(destination: EditMemberView(member:memberArray[index], arrayIndex:index)) {
+                                    HStack{
+                                        let payment:Int = calclatePayment(member:memberArray[index],count:memberArray.count,total:total)
+                                        let showText: String = payment>=0 ?
+                                            String(payment) + "円貰う" :
+                                            String(payment * -1) + "円払う"
+                                        Text(memberArray[index].name)
+                                        Spacer()
+                                        Text(showText)
+                                    }
+                                }
+                            }
+                    }
                 }
-            }
-        } else {}
+            } else {}
         }
-}
+    }
+    
+    func calclatePayment (member:Member,count:Int,total:Int) -> Int {
+        member.payment-total/count
+    }
 }
 
 
